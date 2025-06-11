@@ -1,0 +1,100 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  gap: 16px;
+  max-width: 400px;
+  margin: 36px auto;
+  padding: 40px;
+  //   border: 2px solid gray;
+  box-shadow: 1px 1px 2px #eeeeee, -1px -1px 2px #eeeeee;
+  border-radius: 16px;
+
+  h2 {
+    font-weight: 400;
+  }
+
+  input[type='tel'] {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 14px;
+    border: none;
+    box-shadow: 1px 1px 2px #eeeeee, -1px -1px 2px #eeeeee;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    color: var(--foreground);
+  }
+
+  button {
+    padding: 12px;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    border: none;
+    border-radius: 14px;
+    font-weight: 300;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.inoutLabel {
+  font-size: 0.8rem;
+  margin: 2px;
+  color: rgb(91, 91, 91);
+}
+
+.moods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.moodOption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 4px 2px;
+  //   border: 1px solid #ccc;
+  box-shadow: 1px 1px 2px #eeeeee, -1px -1px 2px #eeeeee;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3 ease-in-out;
+
+  input {
+    display: none;
+  }
+
+  span:first-of-type {
+    font-size: 16px;
+  }
+
+  &:has(input:checked) {
+    background-color: #efefef;
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.success {
+  color: green;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
