@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'randomuser.me',
-        // port: '8000', // اگه روی پورت دیگه‌ای هستی اینو تغییر بده
+        port: '', // اگه روی پورت دیگه‌ای هستی اینو تغییر بده
         pathname: '/**',
       },
     ],
