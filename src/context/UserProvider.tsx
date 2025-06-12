@@ -23,7 +23,7 @@ export const UserProvider = ({
   currentUser,
 }: {
   children: ReactNode;
-  currentUser: UserType;
+  currentUser: UserType | null;
 }) => {
   const [user, setUser] = useState<UserType | null>(currentUser);
 

@@ -1,9 +1,10 @@
 'use client';
+import styles from './AuthForm.module.scss';
 
 import { useActionState, useEffect } from 'react';
-import { loginAction } from '../../../actions/action.login';
-import styles from './AuthForm.module.scss';
 import { useRouter } from 'next/navigation';
+
+import { loginAction } from '../../../actions/action.login';
 import { useUser } from '@/context/UserProvider';
 
 const moods = [
@@ -30,11 +31,12 @@ export default function AuthForm() {
       addUser(state.user);
       router.push('/dashboard');
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state, router]);
 
   return (
     <form className={styles.form} action={formAction}>
-      <h2>Login</h2>
+      <h2>Welcome :)</h2>
 
       <div>
         <label htmlFor="phone" className={styles.inoutLabel}>
@@ -60,7 +62,6 @@ export default function AuthForm() {
                   label: mood.label,
                   icon: mood.icon,
                 })}
-                //   required
               />
               <span>{mood.icon}</span>
               <span>{mood.label}</span>

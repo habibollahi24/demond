@@ -1,5 +1,6 @@
 'use server';
 
+import { UserType } from '@/features/auth/type.auth';
 import { cache } from 'react';
 
 const currentUser = cache(
@@ -21,7 +22,7 @@ const currentUser = cache(
       user: {
         ...user,
         ...JSON.parse(String(restData)),
-      },
+      } as UserType,
     };
   }
 );

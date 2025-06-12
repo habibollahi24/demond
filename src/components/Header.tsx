@@ -18,8 +18,6 @@ export default function Header() {
           AuthMe !
         </Link>
 
-        {/* <div>theme</div> */}
-
         {user && (
           <div style={{ display: 'flex', gap: '2px' }}>
             <button
