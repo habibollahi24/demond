@@ -21,6 +21,7 @@ export default async function DashboardPage() {
           alt="User"
           width={100}
           height={100}
+          unoptimized
         />
       </div>
       <div className={`${styles.item} ${styles.item1}`}>
